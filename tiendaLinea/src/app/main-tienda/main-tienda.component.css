@@ -1,0 +1,21 @@
+*{
+   box-sizing: border-box;
+}
+
+.fondo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -8000;
+    filter: blur(3px);
+    min-height: 100vh
+}
+
+#principal{
+    position: relative;
+}
+
+.ocultar{
+    display: none;
+}

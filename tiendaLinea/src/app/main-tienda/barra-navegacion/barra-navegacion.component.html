@@ -1,0 +1,12 @@
+
+    <div class="navbar">
+        <a href="" class="navbar-brand">TiendaFrutas</a>      
+           <div class="right">
+                <li class='material-icons' (click) = "this.operaciones.setComponenteActivo(0)">menu</li>
+                <li class='material-icons' (click) = "this.operaciones.setComponenteActivo(2)"  >shopping_cart 
+                    <span class="badge badge-pill badge-danger" *ngIf = "this.operaciones.productosEscogidos.length > 0" [innerText]="this.operaciones.productosEscogidos.length"></span>
+                </li>
+                <li class='material-icons'>payment</li>
+                <li class='material-icons' (click)= "this.logout()">logout</li>
+           </div> 
+    </div>

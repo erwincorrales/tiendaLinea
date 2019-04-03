@@ -1,0 +1,85 @@
+.catalogo{
+    margin-top: 10px;
+    background-color: white;
+    padding: 30px;
+}
+
+.catalogo-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.busqueda{
+    /* position: absolute; */
+    /* right: 0; */
+    /* top: 0; */
+    float: right;
+    padding: 0px;
+}
+
+.busqueda p{
+    margin: 0;
+    font-weight: bold
+}
+
+.busqueda input{
+    padding: 3px;
+    width: 200px;
+}
+
+.prod-contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center
+}
+
+.producto{
+    border: 2px solid lightgray;
+    padding: 1px 10px 15px;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 20px;
+}
+
+.producto img{
+    height: 220px;
+}
+
+.producto div input{
+    display: inline;
+    width: 40px;
+    height: 42px;
+    margin: 0 5px;
+    padding: 3px;
+}
+
+.producto p{
+    margin: 0;
+}
+
+.producto h4{
+    margin-bottom: 15px;
+}
+
+.btn{
+    color: white;
+    font-weight: bold;
+    height: 42px;
+}
+
+.prod-botones{
+   margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.añadir{
+    height: 100%;
+}
+
+.oculto{
+    display: none;
+}

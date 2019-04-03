@@ -1,0 +1,23 @@
+<div class="carrito" [ngClass] = "{oculto: this.operaciones.componenteActivo != 2}">
+  <h4>Carrito de Compras</h4>
+  <hr>
+  <div class="contenido">
+    <div class="lista">
+      <div class="item" *ngFor="let item of this.operaciones.productosEscogidos">
+        <img src="../../../assets/imagenesBase/{{item.articulo.imagen}}" alt="">
+        <div>
+          <h5>{{item.articulo.nombre}}</h5>
+          <p>Cantidad: {{item.cantidad}}</p>
+          <p>Subtotal: ${{item.articulo.precio * item.cantidad}}</p> 
+        </div>
+      </div>
+    </div>
+    <div class="saldo">
+      <h3>Total: $ <span [innerText]="this.operaciones.retornarSaldoTotalCarrito()"></span> </h3>
+      <div class="btn-group">
+        <button class="btn btn-danger" (click) = "this.operaciones.eliminarArticulosCarrito()">Cancelar</button>
+        <button class="btn btn-primary" (click) = "this.operaciones.hacerCompra()" >Pagar</button>
+      </div>  
+    </div>
+  </div>
+</div>

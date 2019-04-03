@@ -1,0 +1,41 @@
+.carrito{
+    margin: 30px auto;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 1px 4px 2px black;
+    border-radius: 4px; 
+    max-width: 768px;
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    padding: 3px;
+    display: flex;
+    box-shadow: 1px 1px 3px black;
+    margin: 10px;
+    width: 60%;
+}
+
+img{
+    width: 20%;
+    height: 100px;
+    margin: 5px 10px  
+}
+
+.lista{
+    max-height: 400px;
+    max-width: 500px;
+    overflow-y: scroll 
+}
+
+.saldo{
+    padding: 30px;
+}
+
+.oculto{
+    display: none;
+}

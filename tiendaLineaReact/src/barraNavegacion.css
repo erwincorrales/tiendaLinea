@@ -1,0 +1,23 @@
+.navbar{
+    background-color: aliceblue;
+    color: gray;
+    box-shadow: 1px 0px 3px #777
+}
+
+a{
+  color: grey  
+}
+
+.material-icons{
+    padding: 10px;
+    font-size: 24px;
+    list-style: none;
+    display: inline;
+    cursor: pointer
+}
+
+.badge{
+  font-size: 12px;
+  margin: 0
+}
+

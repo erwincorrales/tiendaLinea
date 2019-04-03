@@ -1,0 +1,13 @@
+
+<div class="detalle" *ngFor = "let articulo of this.operaciones.productoDetalle" [ngClass] =  "{oculto: this.operaciones.getComponenteActivo() != 1 }">
+  <h3>{{articulo.nombre}}</h3>
+  <hr>
+  <div class="contenido" >
+    <img src="./../../../assets/imagenesBase/{{articulo.imagen}}" alt="">
+    <div class="descripcion">
+      <p><b>Precio: </b>$ {{articulo.precio}}</p>
+      <p><b>Unidades Disponibles: </b>{{articulo.unidades}}</p>
+    </div>
+  </div>
+  <button class="btn btn-outline-primary" (click)="esconder()">Atrás</button>
+</div>

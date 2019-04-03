@@ -1,0 +1,17 @@
+<div class="a container-fluid">
+        <img src="/assets/imagenesBase/login-fondo.jpg" alt="">
+        <div class="row">
+            <form [formGroup]="formlogin" class="login" (ngSubmit)="logearse(user.value, clave.value, $event)">
+                <h3>Iniciar Sesion</h3>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="text" #user formControlName = "usuario" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                <label for="clave">Contraseña:</label>
+                <input type="password" #clave formControlName = "contrasena" required>
+                <label class="error" *ngIf=no_login>No se ha podido hacer log in - Datos incorrectos!</label>
+                <button class="btn btn-success" type="submit" [disabled] = "!formlogin.valid">Ingresar</button>
+            </form>
+        </div>
+
+        
+</div>
+

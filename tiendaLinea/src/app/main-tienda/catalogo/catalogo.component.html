@@ -1,0 +1,27 @@
+<div class="catalogo" [ngClass] = "{oculto: this.operaciones.getComponenteActivo() != 0}">
+    <div class="catalogo-title">
+        <h4 class="brand-logo left">Catálogos de Productos</h4>
+        <div class="busqueda">
+            <p>¿Qué estás buscando?</p>
+            <input class="form-control" type="text" name="busqueda" #busqueda placeholder="Buscar Producto" (keyup)="buscar(busqueda.value)">
+        </div>
+    </div>
+    <hr>
+    <div class="prod-contenedor">
+        <div class="producto" *ngFor= "let item of this.operaciones.getProductos()">
+            <img class="img-fluid" src="./../../assets/imagenesBase/{{item.imagen}}" alt="">
+            <h4 >{{item.nombre}}</h4>
+            <p><b>Precio: </b><span  >{{item.precio | currency: 'USD' : 'symbol' : '1.0' }}</span></p>
+            <p><b>Unidades Disponibles: </b><span #unidades>{{item.unidades}}</span></p>
+            <p #id class="oculto" >{{item._id}}</p>
+            <div class="prod-botones">
+                <button class="btn btn-primary" (click) = "this.operaciones.setProductoDetalle(id.innerText)" >Ver Más</button>
+                <span class="añadir">
+                    <button class="btn btn-warning left" (click) = "this.operaciones.agregarItemCarro(item, cant.value)" >Añadir</button>
+                    <input #cant type="number" min="1" step="1" value="1">    
+                </span> 
+            </div>
+            
+        </div>
+    </div>
+</div>

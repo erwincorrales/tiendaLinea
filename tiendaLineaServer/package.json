@@ -1,0 +1,16 @@
+{
+  "name": "tiendalineaserver",
+  "version": "1.0.0",
+  "description": "servidor de tienda en linea con mongodb y express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "erwin corrales",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
+}
